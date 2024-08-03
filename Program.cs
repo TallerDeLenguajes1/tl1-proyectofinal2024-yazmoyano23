@@ -6,18 +6,26 @@ using System.Threading.Tasks;
 using InfoDigi;
 using espacioPersonaje;
 using fabrica;
+using espacioJson;
 
 public partial class Program
 {
     public static async Task Main()
     {
-        var competidores = new List<Personaje>(); //lista vacía que contendrá los 10 personajes
+      /*  var competidores = new List<Personaje>(); //lista vacía que contendrá los 10 personajes
         FabricaDePersonajes Fabrica = new FabricaDePersonajes();
         
         await Fabrica.GetDigiAsync();
 		//Fabrica.MostrarPersonajes();
-        competidores = Fabrica.ObtenerAleatorios(10);
-        foreach (var digimon in competidores)
+        competidores = Fabrica.ObtenerAleatorios(10);*/
+
+        var misPersonajesJson = new PersonajesJson();
+        string rutaArchivo = "Digimon.json";
+       // misPersonajesJson.GuardarPersonajes(competidores,rutaArchivo);
+
+        var recuperados = new List<Personaje>();
+        recuperados = misPersonajesJson.LeerPersonajes(rutaArchivo);
+        foreach (var digimon in recuperados)
         {
             Console.WriteLine(digimon.ToString());
         }

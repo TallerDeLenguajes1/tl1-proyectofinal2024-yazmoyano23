@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace espacioPersonaje
 {
     public class Personaje {
@@ -12,15 +14,15 @@ namespace espacioPersonaje
         private int Velocidad; //1 y 10
 
 
-        public string? nombre { get => nombre; set => nombre = value; }
-        public int id { get => id; set => id = value; }
-        public string? tipo { get => tipo; set => tipo = value; }
-        public int nivel { get => nivel; set => nivel = value; }
-        public int salud { get => salud; set => salud = value; }
-        public int fuerza { get => fuerza; set => fuerza = value; }
-        public int destreza { get => destreza; set => destreza = value; }
-        public int evasion { get => evasion; set => evasion = value; }
-        public int velocidad { get => velocidad; set => velocidad = value; }
+        public string? nombre { get => Nombre; set => Nombre = value; }
+        public int id { get => Id; set => Id = value; }
+        public string? tipo { get => Tipo; set => Tipo = value; }
+        public int nivel { get => Nivel; set => Nivel = value; }
+        public int salud { get => Salud; set => Salud = value; }
+        public int fuerza { get => Fuerza; set => Fuerza = value; }
+        public int destreza { get => Destreza; set => Destreza = value; }
+        public int evasion { get => Evasion; set => Evasion = value; }
+        public int velocidad { get => Velocidad; set => Velocidad = value; }
 
         public Personaje(){}
         public Personaje(int id,string? nombre, string? tipo, int nivel, int fuerza, int destreza, int evasion, int velocidad){
