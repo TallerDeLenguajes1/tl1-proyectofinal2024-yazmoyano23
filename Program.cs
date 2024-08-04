@@ -12,20 +12,22 @@ public partial class Program
 {
     public static async Task Main()
     {
-      /*  var competidores = new List<Personaje>(); //lista vacía que contendrá los 10 personajes
+        var competidores = new List<Personaje>(); //lista vacía que contendrá los 10 personajes
         FabricaDePersonajes Fabrica = new FabricaDePersonajes();
-        
-        await Fabrica.GetDigiAsync();
-		//Fabrica.MostrarPersonajes();
-        competidores = Fabrica.ObtenerAleatorios(10);*/
 
-        var misPersonajesJson = new PersonajesJson();
         string rutaArchivo = "Digimon.json";
-       // misPersonajesJson.GuardarPersonajes(competidores,rutaArchivo);
+        var personajeArchivos = new PersonajesJson();
 
-        var recuperados = new List<Personaje>();
-        recuperados = misPersonajesJson.LeerPersonajes(rutaArchivo);
-        foreach (var digimon in recuperados)
+        if (personajeArchivos.Existe(rutaArchivo))
+        {
+            competidores = personajeArchivos.LeerPersonajes(rutaArchivo);
+        } else {
+            await Fabrica.GetDigiAsync();
+            competidores = Fabrica.ObtenerAleatorios(10);
+            personajeArchivos.GuardarPersonajes(competidores,rutaArchivo);
+        }
+    
+        foreach (var digimon in competidores)
         {
             Console.WriteLine(digimon.ToString());
         }

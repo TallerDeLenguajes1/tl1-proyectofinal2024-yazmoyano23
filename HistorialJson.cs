@@ -1,6 +1,3 @@
-
-//4) Crear un método llamado Existe que reciba un nombre de archivo y que retorne un True
-//si existe y tiene datos o False en caso contrario*/
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,20 +6,31 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using espacioPersonaje;
 using TrabajandoJson;
-
-namespace espacioJson
+namespace especioHistorial
 {
-    public class PersonajesJson
+    class HistorialJson
     {
-        public void GuardarPersonajes(List<Personaje> ListaPersonajes, string NombreArchivo){
- 
+        public void GuardarGanador(Personaje Ganador, string NombreArchivo){ //Pendiente la info relevante
             try
             {
+                var listaGanadores = new List<Personaje>();
+
+                if (Existe(NombreArchivo)) //Si el archivo existe y tiene ganadores
+                {
+                    listaGanadores = LeerGanadores(NombreArchivo); //Recibo la lista del archivo con ganadores
+                    listaGanadores.Add(Ganador); //Agrego el nuevo
+            
+                } else {
+                    listaGanadores.Add(Ganador);
+                }
+                
                 var miHelperdeArchivos = new HelperDeJson();
+
                 var options = new JsonSerializerOptions { WriteIndented = true };
-                string personajesJson = JsonSerializer.Serialize(ListaPersonajes, options);
+                string personajesJson = JsonSerializer.Serialize(listaGanadores, options);
                 Console.WriteLine("Archivo Serializado : " + NombreArchivo);
-                miHelperdeArchivos.GuardarArchivoTexto(NombreArchivo, personajesJson); 
+                miHelperdeArchivos.GuardarArchivoTexto(NombreArchivo, personajesJson);   
+
             }
             catch (System.Exception ex)
             {
@@ -31,16 +39,16 @@ namespace espacioJson
             } 
         }
 
-        public List<Personaje> LeerPersonajes(string nombreArchivo) {
+        public List<Personaje> LeerGanadores(string nombreArchivo) {
 
             try
             {
                 var miHelperDeArchivos = new HelperDeJson();
                 string jsonDocument = miHelperDeArchivos.AbrirArchivoTexto(nombreArchivo); 
                 Console.WriteLine();
-                var listadoPersonajesRecuperados = JsonSerializer.Deserialize<List<Personaje>>(jsonDocument);
+                var GanadoresRecuperados = JsonSerializer.Deserialize<List<Personaje>>(jsonDocument);
 
-                return listadoPersonajesRecuperados;                
+                return GanadoresRecuperados;                
             }
             catch (System.Exception ex)
             {
@@ -66,5 +74,6 @@ namespace espacioJson
                 return false;
             }
         }
+
     }
 }

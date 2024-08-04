@@ -10,7 +10,7 @@ namespace espacioPersonaje
         private int Salud; // 100
         private int Fuerza; // 1 y 10
         private int Destreza; // 1 y 5
-        private int Evasion; //Pensaar como reemplazar 1 a 10
+        private int Evasion;
         private int Velocidad; //1 y 10
 
 
