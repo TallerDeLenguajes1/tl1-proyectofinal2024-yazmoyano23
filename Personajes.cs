@@ -1,3 +1,4 @@
+using System.Reflection.Metadata.Ecma335;
 using System.Text.Json.Serialization;
 
 namespace espacioPersonaje
@@ -56,6 +57,47 @@ namespace espacioPersonaje
 
             return Aleatorios;
         }
+/*
+        1) Elija 2 personajes para que compitan entre ellos.
+        2) El combate se realiza por turnos. Por cada turno un personaje ataca y el otro se
+        defiende.
+        3) El combate se mantiene hasta que uno es vencido (salud <= 0)
+        4) El personaje que pierde la batalla es eliminado de la competencia
+        5) El que gane es beneficiado con una mejora en sus habilidades.
+        por ejemplo: +10 en salud o +5 en defensa. */
+
+
+        public int ProvocarDanio() { 
+            int danioProvocado;
+            Random aleatorio = new Random();
+
+            int Ataque = Destreza * Fuerza * Nivel;
+            int Efectividad = aleatorio.Next(101);
+            danioProvocado = Ataque * Efectividad;
+            
+            return danioProvocado;
+        }
+
+		public void RecibirDanio(int danio) { 
+            int Defensa = Evasion * Velocidad;
+			int Golpe = (danio - Defensa) / 500;						
+            
+            Salud = Salud - Golpe;
+        }
+
+        public void Ataque(Personaje enemigo) {
+          	int danioProvocado;
+            Random aleatorio = new Random();
+
+            int Ataque = Destreza * Fuerza * Nivel;
+            int Efectividad = aleatorio.Next(101);
+          	int Defensa = enemigo.evasion * enemigo.velocidad;
+            danioProvocado = ((Ataque * Efectividad) - Defensa) / 500;	
+            
+          	Console.WriteLine(Nombre + " - Ataque: " + danioProvocado);
+            enemigo.salud = enemigo.salud - danioProvocado;
+          	Console.WriteLine(enemigo.nombre + " - Salud restante: " + enemigo.salud);
+    }
     }
 }
 

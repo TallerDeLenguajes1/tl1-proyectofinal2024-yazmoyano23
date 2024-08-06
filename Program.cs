@@ -27,10 +27,14 @@ public partial class Program
             personajeArchivos.GuardarPersonajes(competidores,rutaArchivo);
         }
     
-        foreach (var digimon in competidores)
+      /*  foreach (var digimon in competidores)
         {
             Console.WriteLine(digimon.ToString());
-        }
+        }*/
+
+        var partida = new Partida();
+        //partida.ElegirPersonaje(competidores);
+        partida.IniciarPartida(competidores);
 
     }
 
