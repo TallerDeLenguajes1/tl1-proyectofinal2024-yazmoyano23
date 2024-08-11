@@ -93,15 +93,22 @@ namespace fabrica
         for (int i = 0; i < cantidad; i++) {
             int indice = random.Next(Arreglo1.Length);
             player = GetPersonaje(indice,i);
-            Aleatorios.Add(player);
-          /*  if(Aleatorios.Find(a => a.nombre == player.nombre) != null) 
+            bool existe = false;
+            foreach (var digimon in Aleatorios)
+            {
+                if (digimon.nombre == player.nombre)
+                {
+                    existe = true;
+                }
+            }
+           if(existe) 
             {
                 i--;
             }
             else
             {
                 Aleatorios.Add(player);
-            }*/
+            }
         }
         return Aleatorios;
     }        

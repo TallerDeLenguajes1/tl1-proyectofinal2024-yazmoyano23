@@ -1,5 +1,6 @@
 using System.Reflection.Metadata.Ecma335;
 using System.Text.Json.Serialization;
+using espacioDatosPelea;
 
 namespace espacioPersonaje
 {
@@ -13,6 +14,7 @@ namespace espacioPersonaje
         private int Destreza; // 1 y 5
         private int Evasion;
         private int Velocidad; //1 y 10
+        private List<DatosPelea> Datos;
 
 
         public string? nombre { get => Nombre; set => Nombre = value; }
@@ -24,6 +26,7 @@ namespace espacioPersonaje
         public int destreza { get => Destreza; set => Destreza = value; }
         public int evasion { get => Evasion; set => Evasion = value; }
         public int velocidad { get => Velocidad; set => Velocidad = value; }
+        public List<DatosPelea> datos { get; set; }
 
         public Personaje(){}
         public Personaje(int id,string? nombre, string? tipo, int nivel, int fuerza, int destreza, int evasion, int velocidad){
@@ -36,6 +39,7 @@ namespace espacioPersonaje
             Destreza = destreza;
             Evasion = evasion;
             Velocidad = velocidad;
+            Datos = new List<DatosPelea>();
         }
 
         // Método para mostrar el personaje
@@ -57,15 +61,6 @@ namespace espacioPersonaje
 
             return Aleatorios;
         }
-/*
-        1) Elija 2 personajes para que compitan entre ellos.
-        2) El combate se realiza por turnos. Por cada turno un personaje ataca y el otro se
-        defiende.
-        3) El combate se mantiene hasta que uno es vencido (salud <= 0)
-        4) El personaje que pierde la batalla es eliminado de la competencia
-        5) El que gane es beneficiado con una mejora en sus habilidades.
-        por ejemplo: +10 en salud o +5 en defensa. */
-
 
         public int ProvocarDanio() { 
             int danioProvocado;
@@ -97,7 +92,36 @@ namespace espacioPersonaje
           	Console.WriteLine(Nombre + " - Ataque: " + danioProvocado);
             enemigo.salud = enemigo.salud - danioProvocado;
           	Console.WriteLine(enemigo.nombre + " - Salud restante: " + enemigo.salud);
-    }
+        }
+
+        public void Mejora() {
+            string[] habilidades = {"Fuerza","Destreza","Evasion","Velocidad"};
+            Random aleatorio = new Random();
+            int indice = aleatorio.Next(4);
+            int aumento = aleatorio.Next(50,110);
+            switch(habilidades[indice]) 
+            {
+                case "Fuerza":
+                    Fuerza = Fuerza + aumento;
+                    Console.WriteLine("Fuerza +" + aumento);
+                    break;
+                case "Destreza":
+                        Destreza = Destreza + aumento;
+                        Console.WriteLine("Destreza +" + aumento);
+                        break;
+                case "Evasion":
+                    Evasion = Evasion + aumento;
+                    Console.WriteLine("Evasion +" + aumento);
+                    break;
+                case "Velocidad":
+                    Velocidad = Velocidad + aumento;
+                    Console.WriteLine("Velocidad +" + aumento);
+                    break;
+                default:
+                    Console.WriteLine("No existe la habilidad indicada");
+                    break;
+            }
+        }
     }
 }
 
