@@ -19,7 +19,7 @@ Para este registro se utilizan archivos JSON tanto para los personajes como para
 
 [Digimon API](https://digimon-api.vercel.app/index.html) se utiliza para obtener información clave sobre los personajes del juego
 
-El metodo que se encarga de realizar la peticion HTTP a la misma es GetDigiAsunc, la cual se ejecuta de manera asincrona,recuperando los datos que llegan en un archivo JSON con los siguientes datos :
+El metodo que se encarga de realizar la peticion HTTP a la misma es GetDigiAsync, la cual se ejecuta de manera asincrona, recuperando los datos que llegan en un archivo JSON con los siguientes datos :
 ```
 [
   {
@@ -39,7 +39,7 @@ El metodo que se encarga de realizar la peticion HTTP a la misma es GetDigiAsunc
   }
 ]
 ```
-Una vez guardados los datos en un arreglo, las propiedades name y level son las utilizadas en la creacion de la lista de personajes, que será la definitiva para el desarrollo del juego, dentro de la clase FabricaDePersonajes. El metodo ObtenerAleatorios añade el resto de las caracteristicas de los competidores como el ID, nivel, destreza, evasion, velocidad. 
+Una vez guardados los datos en un arreglo, las propiedades name y level son las utilizadas en la creacion de la lista de personajes, que será la definitiva para el desarrollo del juego, dentro de la clase FabricaDePersonajes. El metodo ObtenerAleatorios añade el resto de las caracteristicas de los competidores como el ID, Nivel, Destreza, Evasion, Velocidad. 
         
 
 
