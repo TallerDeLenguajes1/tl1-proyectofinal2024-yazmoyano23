@@ -44,10 +44,10 @@ namespace espacioPersonaje
 
         // Método para mostrar el personaje
         public override string ToString() {
-            return $"ID: {Id}, Nombre: {Nombre}, Tipo: {Tipo}, Nivel: {Nivel}, Salud: {Salud} ,Fuerza: {Fuerza}, Destreza: {Destreza}, Evasion: {Evasion}, Velocidad: {Velocidad}";
+            return $"\nID: {Id}, Nombre: {Nombre}, Tipo: {Tipo}, Nivel: {Nivel}, Salud: {Salud} ,Fuerza: {Fuerza}, Destreza: {Destreza}, Evasion: {Evasion}, Velocidad: {Velocidad}\n";
         }
             
-        //Esta funcion va a recibir la lista general y devolvera la lista con 10 personajes 
+        //Este metodo recibe la lista general y devolvera la lista con 10 personajes 
         public List<Personaje> ObtenerAleatorios(List<Personaje> Lista){ 
 
             var Aleatorios = new List<Personaje>();
@@ -62,63 +62,47 @@ namespace espacioPersonaje
             return Aleatorios;
         }
 
-        public int ProvocarDanio() { 
-            int danioProvocado;
-            Random aleatorio = new Random();
-
-            int Ataque = Destreza * Fuerza * Nivel;
-            int Efectividad = aleatorio.Next(101);
-            danioProvocado = Ataque * Efectividad;
-            
-            return danioProvocado;
-        }
-
-		public void RecibirDanio(int danio) { 
-            int Defensa = Evasion * Velocidad;
-			int Golpe = (danio - Defensa) / 500;						
-            
-            Salud = Salud - Golpe;
-        }
-
         public void Ataque(Personaje enemigo) {
           	int danioProvocado;
             Random aleatorio = new Random();
 
             int Ataque = Destreza * Fuerza * Nivel;
-            int Efectividad = aleatorio.Next(101);
+            int Efectividad = aleatorio.Next(1,101);
           	int Defensa = enemigo.evasion * enemigo.velocidad;
             danioProvocado = ((Ataque * Efectividad) - Defensa) / 500;	
             
           	Console.WriteLine(Nombre + " - Ataque: " + danioProvocado);
             enemigo.salud = enemigo.salud - danioProvocado;
-          	Console.WriteLine(enemigo.nombre + " - Salud restante: " + enemigo.salud);
+          	Console.WriteLine(enemigo.nombre + " - Salud restante: " + enemigo.salud + "\n");
         }
 
-        public void Mejora() {
+        //Al final de la pelea si el personaje es ganador mejora sus habilidades, 
+        //Todo se realiza de manera aleatoria, la habilidad a mejorar y el valor de mejora
+        public void MejorarHabilidades() {
             string[] habilidades = {"Fuerza","Destreza","Evasion","Velocidad"};
             Random aleatorio = new Random();
             int indice = aleatorio.Next(4);
-            int aumento = aleatorio.Next(50,110);
+            int aumento = aleatorio.Next(5,11);
             switch(habilidades[indice]) 
             {
                 case "Fuerza":
                     Fuerza = Fuerza + aumento;
-                    Console.WriteLine("Fuerza +" + aumento);
+                    Console.WriteLine("\nMejora de habilidad: Fuerza +" + aumento);
                     break;
                 case "Destreza":
                         Destreza = Destreza + aumento;
-                        Console.WriteLine("Destreza +" + aumento);
+                        Console.WriteLine("\nMejora de habilidad: Destreza +" + aumento);
                         break;
                 case "Evasion":
                     Evasion = Evasion + aumento;
-                    Console.WriteLine("Evasion +" + aumento);
+                    Console.WriteLine("\nMejora de habilidad: Evasion +" + aumento);
                     break;
                 case "Velocidad":
                     Velocidad = Velocidad + aumento;
-                    Console.WriteLine("Velocidad +" + aumento);
+                    Console.WriteLine("\nMejora de habilidad: Velocidad +" + aumento);
                     break;
                 default:
-                    Console.WriteLine("No existe la habilidad indicada");
+                    Console.WriteLine("\nNo existe la habilidad indicada");
                     break;
             }
         }

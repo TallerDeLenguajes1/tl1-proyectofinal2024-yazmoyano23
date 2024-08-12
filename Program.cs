@@ -9,6 +9,7 @@ using fabrica;
 using espacioJson;
 using especioHistorial;
 using espacioDatosPelea;
+using espacioMensajes;
 
 public partial class Program
 {
@@ -23,10 +24,13 @@ public partial class Program
         string rutaPersonajes = "Digimon.json";
         string rutaGanadores = "Ganadores.json";
         var personajeArchivos = new PersonajesJson();
-
+        var msj = new mensajes();
+        
         do
         {
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            //Console.Clear();
+            msj.titulo();
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("\n1: NUEVA PARTIDA");
             Console.WriteLine("2: VER GANADORES");
             Console.WriteLine("3: SALIR");
@@ -59,20 +63,31 @@ public partial class Program
 
             if (seleccion == 2)
             {
-                var ganadores = new List<Personaje>();
                 var historial = new HistorialJson();
-                var listadatos = new List<DatosPelea>();
-                ganadores = historial.LeerGanadores(rutaGanadores);
-                foreach (var ganador in ganadores)
+                if (historial.Existe(rutaGanadores))
                 {
-                    listadatos = ganador.datos;
-                    Console.WriteLine(ganador.ToString());
-                   
-                    foreach (var item in listadatos)
+                    var ganadores = new List<Personaje>();
+                    var listadatos = new List<DatosPelea>();
+                    ganadores = historial.LeerGanadores(rutaGanadores);
+                    Console.WriteLine("\nLISTA DE GANADORES");
+                    foreach (var ganador in ganadores)
                     {
-                        Console.WriteLine(item.ToString()); 
+                        listadatos = ganador.datos;
+                        Console.WriteLine(ganador.ToString());
+                   
+                        foreach (var item in listadatos)
+                        {
+                            Console.WriteLine(item.ToString()); 
+                        }
                     }
+                } else {
+                    Console.WriteLine("\nAun no se guardaron ganadores");
                 }
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("\nPresione una tecla para volver al menu...");
+                Console.ReadKey();
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.Clear();
             }
 
             if (seleccion == 3)
@@ -86,31 +101,5 @@ public partial class Program
         } while (salir);
     
         
-    }
-
-    static async Task<Digimon[]> GetDigiAsync()
-    {
-        var url = "https://digimon-api.vercel.app/api/digimon";
-        
-        try
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                HttpResponseMessage response = await client.GetAsync(url);
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
-                
-                // Deserializar la respuesta JSON en una lista de objetos Fruit
-                Digimon[]? personajes = JsonSerializer.Deserialize<Digimon[]>(responseBody);
-                
-                return personajes;
-            }
-        }
-        catch (HttpRequestException e)
-        {
-            Console.WriteLine("Problemas de acceso a la API");
-            Console.WriteLine("Message: {0}", e.Message);
-            return null;
-        }
     }
 }

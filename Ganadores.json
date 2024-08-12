@@ -1,0 +1,408 @@
+[
+  {
+    "nombre": "Pururumon",
+    "id": 7,
+    "tipo": "Fresh",
+    "nivel": 8,
+    "salud": 88,
+    "fuerza": 396,
+    "destreza": 230,
+    "evasion": 71,
+    "velocidad": 9,
+    "datos": [
+      {
+        "oponente": "Botamon",
+        "saludrestante": 88,
+        "ataques": 4
+      },
+      {
+        "oponente": "Blossomon",
+        "saludrestante": 88,
+        "ataques": 1
+      },
+      {
+        "oponente": "GranKuwagamon",
+        "saludrestante": 88,
+        "ataques": 1
+      },
+      {
+        "oponente": "Imperialdramon",
+        "saludrestante": 88,
+        "ataques": 1
+      },
+      {
+        "oponente": "MetalGarurumon",
+        "saludrestante": 88,
+        "ataques": 1
+      },
+      {
+        "oponente": "SkullGreymon",
+        "saludrestante": 88,
+        "ataques": 1
+      },
+      {
+        "oponente": "Magnamon",
+        "saludrestante": 88,
+        "ataques": 1
+      },
+      {
+        "oponente": "DarkTyrannomon",
+        "saludrestante": 88,
+        "ataques": 1
+      },
+      {
+        "oponente": "Icemon",
+        "saludrestante": 88,
+        "ataques": 1
+      }
+    ]
+  },
+  {
+    "nombre": "MetalGarurumon",
+    "id": 4,
+    "tipo": "Mega",
+    "nivel": 10,
+    "salud": 71,
+    "fuerza": 258,
+    "destreza": 176,
+    "evasion": 10,
+    "velocidad": 355,
+    "datos": [
+      {
+        "oponente": "Blossomon",
+        "saludrestante": 97,
+        "ataques": 4
+      },
+      {
+        "oponente": "Botamon",
+        "saludrestante": 97,
+        "ataques": 1
+      },
+      {
+        "oponente": "SkullGreymon",
+        "saludrestante": 68,
+        "ataques": 2
+      },
+      {
+        "oponente": "Imperialdramon",
+        "saludrestante": 68,
+        "ataques": 1
+      },
+      {
+        "oponente": "Magnamon",
+        "saludrestante": 68,
+        "ataques": 1
+      },
+      {
+        "oponente": "DarkTyrannomon",
+        "saludrestante": 71,
+        "ataques": 2
+      },
+      {
+        "oponente": "Pururumon",
+        "saludrestante": 71,
+        "ataques": 1
+      },
+      {
+        "oponente": "GranKuwagamon",
+        "saludrestante": 71,
+        "ataques": 1
+      },
+      {
+        "oponente": "Icemon",
+        "saludrestante": 71,
+        "ataques": 1
+      }
+    ]
+  },
+  {
+    "nombre": "SkullGreymon",
+    "id": 8,
+    "tipo": "Ultimate",
+    "nivel": 5,
+    "salud": 33,
+    "fuerza": 172,
+    "destreza": 403,
+    "evasion": 72,
+    "velocidad": 110,
+    "datos": [
+      {
+        "oponente": "Botamon",
+        "saludrestante": 44,
+        "ataques": 7
+      },
+      {
+        "oponente": "Icemon",
+        "saludrestante": 41,
+        "ataques": 2
+      },
+      {
+        "oponente": "GranKuwagamon",
+        "saludrestante": 33,
+        "ataques": 2
+      },
+      {
+        "oponente": "Blossomon",
+        "saludrestante": 33,
+        "ataques": 1
+      },
+      {
+        "oponente": "Imperialdramon",
+        "saludrestante": 33,
+        "ataques": 1
+      },
+      {
+        "oponente": "Magnamon",
+        "saludrestante": 33,
+        "ataques": 1
+      },
+      {
+        "oponente": "Pururumon",
+        "saludrestante": 33,
+        "ataques": 1
+      },
+      {
+        "oponente": "MetalGarurumon",
+        "saludrestante": 33,
+        "ataques": 1
+      },
+      {
+        "oponente": "DarkTyrannomon",
+        "saludrestante": 33,
+        "ataques": 1
+      }
+    ]
+  },
+  {
+    "nombre": "GranKuwagamon",
+    "id": 1,
+    "tipo": "Mega",
+    "nivel": 2,
+    "salud": 44,
+    "fuerza": 217,
+    "destreza": 296,
+    "evasion": 104,
+    "velocidad": 68,
+    "datos": [
+      {
+        "oponente": "Imperialdramon",
+        "saludrestante": 47,
+        "ataques": 24
+      },
+      {
+        "oponente": "Blossomon",
+        "saludrestante": 44,
+        "ataques": 3
+      },
+      {
+        "oponente": "DarkTyrannomon",
+        "saludrestante": 44,
+        "ataques": 1
+      },
+      {
+        "oponente": "Icemon",
+        "saludrestante": 44,
+        "ataques": 1
+      },
+      {
+        "oponente": "Botamon",
+        "saludrestante": 44,
+        "ataques": 1
+      },
+      {
+        "oponente": "Magnamon",
+        "saludrestante": 44,
+        "ataques": 1
+      },
+      {
+        "oponente": "MetalGarurumon",
+        "saludrestante": 44,
+        "ataques": 1
+      },
+      {
+        "oponente": "SkullGreymon",
+        "saludrestante": 44,
+        "ataques": 1
+      },
+      {
+        "oponente": "Pururumon",
+        "saludrestante": 44,
+        "ataques": 1
+      }
+    ]
+  },
+  {
+    "nombre": "Leomon",
+    "id": 8,
+    "tipo": "Champion",
+    "nivel": 9,
+    "salud": 127,
+    "fuerza": 4,
+    "destreza": 287,
+    "evasion": 147,
+    "velocidad": 263,
+    "datos": [
+      {
+        "oponente": "Tsukaimon",
+        "saludrestante": 90,
+        "ataques": 7
+      },
+      {
+        "oponente": "Seadramon",
+        "saludrestante": 73,
+        "ataques": 6
+      },
+      {
+        "oponente": "Machinedramon",
+        "saludrestante": 73,
+        "ataques": 1
+      },
+      {
+        "oponente": "Musyamon",
+        "saludrestante": 73,
+        "ataques": 1
+      },
+      {
+        "oponente": "Upamon",
+        "saludrestante": 73,
+        "ataques": 1
+      },
+      {
+        "oponente": "Armadillomon",
+        "saludrestante": 73,
+        "ataques": 1
+      },
+      {
+        "oponente": "Otamamon",
+        "saludrestante": 73,
+        "ataques": 1
+      },
+      {
+        "oponente": "Flymon",
+        "saludrestante": 127,
+        "ataques": 2
+      },
+      {
+        "oponente": "Agumon",
+        "saludrestante": 127,
+        "ataques": 1
+      }
+    ]
+  },
+  {
+    "nombre": "Seadramon",
+    "id": 5,
+    "tipo": "Champion",
+    "nivel": 1,
+    "salud": 51,
+    "fuerza": 145,
+    "destreza": 207,
+    "evasion": 213,
+    "velocidad": 141,
+    "datos": [
+      {
+        "oponente": "Upamon",
+        "saludrestante": 55,
+        "ataques": 34
+      },
+      {
+        "oponente": "Flymon",
+        "saludrestante": 55,
+        "ataques": 2
+      },
+      {
+        "oponente": "Tsukaimon",
+        "saludrestante": 51,
+        "ataques": 3
+      },
+      {
+        "oponente": "Musyamon",
+        "saludrestante": 51,
+        "ataques": 1
+      },
+      {
+        "oponente": "Agumon",
+        "saludrestante": 51,
+        "ataques": 1
+      },
+      {
+        "oponente": "Leomon",
+        "saludrestante": 51,
+        "ataques": 1
+      },
+      {
+        "oponente": "Armadillomon",
+        "saludrestante": 51,
+        "ataques": 1
+      },
+      {
+        "oponente": "Machinedramon",
+        "saludrestante": 51,
+        "ataques": 1
+      },
+      {
+        "oponente": "Otamamon",
+        "saludrestante": 51,
+        "ataques": 1
+      }
+    ]
+  },
+  {
+    "nombre": "Leomon",
+    "id": 8,
+    "tipo": "Champion",
+    "nivel": 9,
+    "salud": 40,
+    "fuerza": 25,
+    "destreza": 18,
+    "evasion": 30,
+    "velocidad": 12,
+    "datos": [
+      {
+        "oponente": "Agumon",
+        "saludrestante": 49,
+        "ataques": 4
+      },
+      {
+        "oponente": "Upamon",
+        "saludrestante": 46,
+        "ataques": 2
+      },
+      {
+        "oponente": "Armadillomon",
+        "saludrestante": 46,
+        "ataques": 1
+      },
+      {
+        "oponente": "Machinedramon",
+        "saludrestante": 46,
+        "ataques": 1
+      },
+      {
+        "oponente": "Flymon",
+        "saludrestante": 46,
+        "ataques": 1
+      },
+      {
+        "oponente": "Seadramon",
+        "saludrestante": 46,
+        "ataques": 1
+      },
+      {
+        "oponente": "Otamamon",
+        "saludrestante": 40,
+        "ataques": 2
+      },
+      {
+        "oponente": "Musyamon",
+        "saludrestante": 40,
+        "ataques": 1
+      },
+      {
+        "oponente": "Tsukaimon",
+        "saludrestante": 40,
+        "ataques": 1
+      }
+    ]
+  }
+]

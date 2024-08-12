@@ -21,7 +21,6 @@ namespace espacioJson
                 var miHelperdeArchivos = new HelperDeJson();
                 var options = new JsonSerializerOptions { WriteIndented = true };
                 string personajesJson = JsonSerializer.Serialize(ListaPersonajes, options);
-                Console.WriteLine("Archivo Serializado : " + NombreArchivo);
                 miHelperdeArchivos.GuardarArchivoTexto(NombreArchivo, personajesJson); 
             }
             catch (System.Exception ex)

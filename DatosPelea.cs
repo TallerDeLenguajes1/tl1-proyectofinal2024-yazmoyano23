@@ -13,7 +13,7 @@ namespace espacioDatosPelea
 
         // Método para mostrar el personaje
         public override string ToString() {
-            return $"Oponente: {Oponente} - Salud Restante: {SaludRestante} - Ataques realizados: {Ataques}";
+            return $"\tOponente: {Oponente} - Salud Restante: {SaludRestante} - Ataques realizados: {Ataques}";
         }
             
     }

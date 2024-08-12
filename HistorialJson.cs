@@ -27,9 +27,9 @@ namespace especioHistorial
                 var miHelperdeArchivos = new HelperDeJson();
 
                 var options = new JsonSerializerOptions { WriteIndented = true };
-                string personajesJson = JsonSerializer.Serialize(listaGanadores, options);
-                Console.WriteLine("Archivo Serializado : " + NombreArchivo);
-                miHelperdeArchivos.GuardarArchivoTexto(NombreArchivo, personajesJson);   
+                string ganadoresJson = JsonSerializer.Serialize(listaGanadores, options);
+                Console.WriteLine("Guardando ganador...");
+                miHelperdeArchivos.GuardarArchivoTexto(NombreArchivo, ganadoresJson);   
 
             }
             catch (System.Exception ex)

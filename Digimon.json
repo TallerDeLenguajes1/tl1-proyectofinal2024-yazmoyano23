@@ -1,0 +1,122 @@
+[
+  {
+    "nombre": "Machinedramon",
+    "id": 0,
+    "tipo": "Mega",
+    "nivel": 5,
+    "salud": 100,
+    "fuerza": 6,
+    "destreza": 2,
+    "evasion": 9,
+    "velocidad": 9,
+    "datos": null
+  },
+  {
+    "nombre": "Armadillomon",
+    "id": 1,
+    "tipo": "Rookie",
+    "nivel": 6,
+    "salud": 100,
+    "fuerza": 10,
+    "destreza": 4,
+    "evasion": 4,
+    "velocidad": 5,
+    "datos": null
+  },
+  {
+    "nombre": "Upamon",
+    "id": 2,
+    "tipo": "Training",
+    "nivel": 1,
+    "salud": 100,
+    "fuerza": 4,
+    "destreza": 5,
+    "evasion": 4,
+    "velocidad": 8,
+    "datos": null
+  },
+  {
+    "nombre": "Otamamon",
+    "id": 3,
+    "tipo": "Rookie",
+    "nivel": 5,
+    "salud": 100,
+    "fuerza": 4,
+    "destreza": 2,
+    "evasion": 3,
+    "velocidad": 10,
+    "datos": null
+  },
+  {
+    "nombre": "Agumon",
+    "id": 4,
+    "tipo": "Rookie",
+    "nivel": 4,
+    "salud": 100,
+    "fuerza": 7,
+    "destreza": 5,
+    "evasion": 1,
+    "velocidad": 7,
+    "datos": null
+  },
+  {
+    "nombre": "Seadramon",
+    "id": 5,
+    "tipo": "Champion",
+    "nivel": 1,
+    "salud": 100,
+    "fuerza": 7,
+    "destreza": 5,
+    "evasion": 5,
+    "velocidad": 7,
+    "datos": null
+  },
+  {
+    "nombre": "Musyamon",
+    "id": 6,
+    "tipo": "Champion",
+    "nivel": 7,
+    "salud": 100,
+    "fuerza": 7,
+    "destreza": 4,
+    "evasion": 6,
+    "velocidad": 9,
+    "datos": null
+  },
+  {
+    "nombre": "Flymon",
+    "id": 7,
+    "tipo": "Champion",
+    "nivel": 1,
+    "salud": 100,
+    "fuerza": 8,
+    "destreza": 5,
+    "evasion": 7,
+    "velocidad": 5,
+    "datos": null
+  },
+  {
+    "nombre": "Leomon",
+    "id": 8,
+    "tipo": "Champion",
+    "nivel": 9,
+    "salud": 100,
+    "fuerza": 4,
+    "destreza": 4,
+    "evasion": 10,
+    "velocidad": 4,
+    "datos": null
+  },
+  {
+    "nombre": "Tsukaimon",
+    "id": 9,
+    "tipo": "Rookie",
+    "nivel": 3,
+    "salud": 100,
+    "fuerza": 2,
+    "destreza": 5,
+    "evasion": 10,
+    "velocidad": 1,
+    "datos": null
+  }
+]

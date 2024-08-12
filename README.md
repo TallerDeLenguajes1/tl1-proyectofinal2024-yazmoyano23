@@ -18,4 +18,4 @@ Para este registro se utilizan archivos JSON tanto para los personajes como para
 ## Uso de la API para Obtener Características de los Personajes
 
 La API se utiliza para obtener información clave sobre los personajes del juego, como su nombre y tipo.
-Puede acceder a la misma en el siguiente enlace: [Digimon API](https://digimon-api.vercel.app/api/digimon).
+Puede acceder a la misma en el siguiente enlace: [Digimon API](https://digimon-api.vercel.app/index.html).
