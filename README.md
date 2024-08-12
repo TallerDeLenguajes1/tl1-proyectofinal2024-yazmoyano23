@@ -17,5 +17,30 @@ Para este registro se utilizan archivos JSON tanto para los personajes como para
 
 ## Uso de la API para Obtener Características de los Personajes
 
-La API se utiliza para obtener información clave sobre los personajes del juego, como su nombre y tipo.
-Puede acceder a la misma en el siguiente enlace: [Digimon API](https://digimon-api.vercel.app/index.html).
+[Digimon API](https://digimon-api.vercel.app/index.html) se utiliza para obtener información clave sobre los personajes del juego
+
+El metodo que se encarga de realizar la peticion HTTP a la misma es GetDigiAsunc, la cual se ejecuta de manera asincrona,recuperando los datos que llegan en un archivo JSON con los siguientes datos :
+```
+[
+  {
+    "name": "Koromon",
+    "img": "https://digimon.shadowsmith.com/img/koromon.jpg",
+    "level": "In Training"
+  },
+  {
+    "name": "Tsunomon",
+    "img": "https://digimon.shadowsmith.com/img/tsunomon.jpg",
+    "level": "In Training"
+  },
+  {
+    "name": "Yokomon",
+    "img": "https://digimon.shadowsmith.com/img/yokomon.jpg",
+    "level": "In Training"
+  }
+]
+```
+Una vez guardados los datos en un arreglo, las propiedades name y level son las utilizadas en la creacion de la lista de personajes, que será la definitiva para el desarrollo del juego, dentro de la clase FabricaDePersonajes. El metodo ObtenerAleatorios añade el resto de las caracteristicas de los competidores como el ID, nivel, destreza, evasion, velocidad. 
+        
+
+
+Info de la Api: [Digimon API](https://digimon-api.vercel.app/index.html).
